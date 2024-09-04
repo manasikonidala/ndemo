@@ -1,0 +1,13 @@
+dist:
+  name: otelcol-custom
+  description: Local OpenTelemetry Collector binary
+  output_path: /tmp/dist
+  otelcol_version: 0.88.0
+exporters:
+  - gomod: "github.com/manasikonidala/napp/emptyexporter v0.0.1"
+    path: emptyexporter
+  - gomod: "go.opentelemetry.io/collector/exporter/prometheusexporter v0.88.0"
+  - gomod: "go.opentelemetry.io/collector/exporter/jaegerexporter v0.88.0"
+receivers:
+  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.88.0
+
